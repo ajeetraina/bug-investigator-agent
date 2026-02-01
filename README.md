@@ -1,4 +1,4 @@
-# 🐛 Bug Investigator Agent
+# 🐛 Bug Investigator Agent + Docker cagent
 
 A multi-agent debugging system built with [Docker cagent](https://github.com/docker/cagent) that helps developers diagnose and fix code issues.
 
