@@ -1,0 +1,29 @@
+# deployment.yaml - Kubernetes config with issues for Bug Investigator
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: myapp:latest
+        # Issue: No resource limits
+        # Issue: No liveness/readiness probes
+        # Issue: Using 'latest' tag
+        volumeMounts:
+        - name: config
+          mountPath: /app/config
+      volumes:
+      - name: config
+        configMap:
+          name: app-config  # Issue: ConfigMap might not exist
