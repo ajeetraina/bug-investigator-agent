@@ -142,14 +142,4 @@ toolsets:
 - [MCP Toolkit](https://docs.docker.com/ai/mcp-toolkit/)
 - [DigitalOcean cagent App](https://marketplace.digitalocean.com/apps/cagent)
 
-## 🤝 Contributing
 
-Contributions welcome! Please open an issue or PR.
-
-## 📄 License
-
-Apache 2.0
-
----
-
-Built with ❤️ by [Collabnix](https://collabnix.com) | [Ajeet Singh Raina](https://github.com/ajeetraina)
