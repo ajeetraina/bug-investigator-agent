@@ -44,33 +44,7 @@ cd bug-investigator-agent
 export OPENAI_API_KEY=your_key_here
 
 # Run the agent
-cagent run ./cagent-openai.yaml
-```
-
-### Test It
-
-Paste this into the agent:
-
-```
-I'm getting this error:
-
-TypeError: 'NoneType' object is not subscriptable
-  File "app.py", line 8, in get_user_name
-    return response.json()['data']['user']['name']
-
-def get_user_name(user_id):
-    response = requests.get(f"https://api.example.com/users/{user_id}")
-    return response.json()['data']['user']['name']
-```
-
-Or run from test-code directory to use filesystem:
-
-```bash
-cd test-code
-cagent run ../cagent-openai.yaml
-
-# Then ask:
-> Read app.py and find all the bugs
+cagent run ./cagent-openai.yaml "Read app.py and find all bugs"
 ```
 
 ## 📁 Project Structure
