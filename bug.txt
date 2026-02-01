@@ -1,0 +1,10 @@
+I'm getting this error when calling an API:
+
+TypeError: 'NoneType' object is not subscriptable
+  File "app.py", line 8, in get_user_name
+    return response.json()['data']['user']['name']
+
+Code:
+def get_user_name(user_id):
+    response = requests.get(f"https://api.example.com/users/{user_id}")
+    return response.json()['data']['user']['name']
